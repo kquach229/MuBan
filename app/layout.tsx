@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { Dancing_Script, Roboto } from 'next/font/google';
 import './globals.css';
 import NavBar from '@/components/NavBar';
+import { ClerkProvider } from '@clerk/nextjs';
+import Footer from '@/components/Footer';
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -14,7 +16,7 @@ const roboto = Roboto({
 // });
 
 export const metadata: Metadata = {
-  title: 'TemplateMaster',
+  title: 'MuBan',
   description: 'Simple templates',
 };
 
@@ -24,11 +26,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
-      <body className={`${roboto.className} antialiased`}>
-        <NavBar />
-        {children}
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang='en'>
+        <body className={`${roboto.className} antialiased`}>
+          <NavBar />
+          {children}
+          <Footer />
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

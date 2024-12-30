@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { motion } from 'motion/react';
 
 const Hero = () => {
   return (
@@ -9,7 +10,12 @@ const Hero = () => {
         </span>
       </div>
 
-      <div>
+      <motion.div
+        className='box'
+        whileHover={{ scale: 1.1 }}
+        transition={{ duration: 0.2 }}
+        initial={{ opacity: 0, x: -500 }}
+        animate={{ opacity: 1, x: 0 }}>
         <Image
           className='flex-1 h-auto'
           alt='wireframe'
@@ -17,7 +23,7 @@ const Hero = () => {
           height={500}
           width={500}
         />
-      </div>
+      </motion.div>
     </div>
   );
 };

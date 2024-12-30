@@ -1,7 +1,7 @@
 'use client';
 import CategoriesGrid from '@/components/CategoriesGrid';
 import Hero from '@/components/Hero';
-
+import { motion } from 'motion/react';
 export default function Home() {
   const categories = [
     { id: 1, category: 'Portfolio & Agency' },
@@ -14,9 +14,13 @@ export default function Home() {
   return (
     <div className='min-h-screen'>
       <Hero />
-      <div className='w-full p-[2rem]'>
+      <motion.div
+        transition={{ duration: 1, delay: 1 }}
+        whileInView={{ opacity: 1 }}
+        initial={{ opacity: 0 }}
+        className='w-full p-[2rem]'>
         <CategoriesGrid title='Popular' items={categories} />
-      </div>
+      </motion.div>
     </div>
   );
 }

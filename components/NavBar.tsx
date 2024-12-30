@@ -3,6 +3,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import { Button } from './ui/button';
+import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs';
 
 const NavBar = () => {
   const [bgBlack, setBgBlack] = useState(false);
@@ -24,7 +26,7 @@ const NavBar = () => {
     <nav
       className={`${bgBlack ? 'bg-black' : 'bg-none'} ${
         bgBlack ? 'text-white' : 'text-black'
-      } z-50 p-5 fixed top-0 w-full flex justify-between`}>
+      } z-50 p-5 fixed top-0 w-full flex justify-between items-center duration-500`}>
       <Link className='flex items-center' href='/'>
         <Image
           src={'/muban_logo.svg'}
@@ -34,8 +36,16 @@ const NavBar = () => {
         />
         <span className='text-xl ml-5'>MuBan</span>
       </Link>
-      <div>
+      <div className='gap-5 flex items-center'>
         <Link href='/templates'>Templates</Link>
+        <SignedOut>
+          <SignInButton>
+            <Button>Get Started</Button>
+          </SignInButton>
+        </SignedOut>
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
       </div>
     </nav>
   );
