@@ -1,13 +1,13 @@
-import type { Metadata } from 'next';
-import { Dancing_Script, Roboto } from 'next/font/google';
-import './globals.css';
-import NavBar from '@/components/NavBar';
-import { ClerkProvider } from '@clerk/nextjs';
-import Footer from '@/components/Footer';
+import type { Metadata } from "next";
+import { Dancing_Script, Roboto } from "next/font/google";
+import "./globals.css";
+import NavBar from "@/components/NavBar";
+import { ClerkProvider } from "@clerk/nextjs";
+import Footer from "@/components/Footer";
 
 const roboto = Roboto({
-  subsets: ['latin'],
-  weight: ['500'],
+  subsets: ["latin"],
+  weight: ["500"],
 });
 
 // const dancingScript = Dancing_Script({
@@ -16,8 +16,8 @@ const roboto = Roboto({
 // });
 
 export const metadata: Metadata = {
-  title: 'MuBan',
-  description: 'Simple templates',
+  title: "MoBan",
+  description: "Simple templates",
 };
 
 export default function RootLayout({
@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-      <html lang='en'>
+      <html lang="en">
         <body className={`${roboto.className} antialiased`}>
           <NavBar />
           {children}

@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import Link from 'next/link';
-import { useEffect, useState } from 'react';
-import { Button } from './ui/button';
-import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs';
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import { Button } from "./ui/button";
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 
 const NavBar = () => {
   const [bgBlack, setBgBlack] = useState(false);
@@ -18,26 +18,28 @@ const NavBar = () => {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
-    return () => window.addEventListener('scroll', handleScroll);
+    return () => window.addEventListener("scroll", handleScroll);
   }, []);
   return (
     <nav
-      className={`${bgBlack ? 'bg-black' : 'bg-none'} ${
-        bgBlack ? 'text-white' : 'text-black'
-      } z-50 p-5 fixed top-0 w-full flex justify-between items-center duration-500`}>
-      <Link className='flex items-center' href='/'>
+      className={`${bgBlack ? "bg-foreground" : "bg-none"} ${
+        bgBlack ? "text-white" : "text-black"
+      } z-50 p-5 fixed top-0 w-full flex justify-between items-center duration-500`}
+    >
+      <Link className="flex items-center" href="/">
         <Image
-          src={'/muban_logo.svg'}
+          src={"/moban_logo.svg"}
           height={70}
           width={70}
-          alt='muban logo'
+          alt="moban logo"
         />
-        <span className='text-xl ml-5'>MuBan</span>
+        <span className="text-xl ml-5">MoBan</span>
       </Link>
-      <div className='gap-5 flex items-center'>
-        <Link href='/templates'>Templates</Link>
+      <div className="gap-5 flex items-center">
+        <Link href="/templates">Templates</Link>
+        <Link href="/about">About</Link>
         <SignedOut>
           <SignInButton>
             <Button>Get Started</Button>

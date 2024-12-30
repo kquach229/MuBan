@@ -1,37 +1,44 @@
-import Autoplay from 'embla-carousel-autoplay';
+import Autoplay from "embla-carousel-autoplay";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from './ui/carousel';
-import { Card, CardContent } from './ui/card';
+} from "./ui/carousel";
+import { Card, CardContent } from "./ui/card";
 
 const ReusableCarousel = ({ carouselItems }) => {
   return (
-    <div className='m-[2rem]'>
-      <Carousel
-        className='w-full max-w-md mx-auto'
-        plugins={[
-          Autoplay({
-            delay: 8000,
-          }),
-        ]}>
-        <CarouselContent>
-          {carouselItems &&
-            carouselItems.map((item) => (
-              <CarouselItem key={item.id}>
-                <Card className={`h-[300px]  flex items-center text-left p-5`}>
-                  <CardContent className='flex'>{item.benefit}</CardContent>
-                </Card>
-              </CarouselItem>
-            ))}
-        </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
-      </Carousel>
-    </div>
+    <Carousel
+      className="w-full max-w-md mx-auto"
+      plugins={[
+        Autoplay({
+          delay: 8000,
+        }),
+      ]}
+    >
+      <CarouselContent>
+        {carouselItems &&
+          carouselItems.map((item) => (
+            <CarouselItem key={item.id}>
+              <Card className={`h-[300px]  flex items-center text-left p-5`}>
+                <CardContent>
+                  <div className="flex flex-col justify-around h-full gap-5">
+                    <span className="underline underline-offset-[3px] font-semibold">
+                      {item.title}
+                    </span>
+
+                    <span>{item.benefit}</span>
+                  </div>
+                </CardContent>
+              </Card>
+            </CarouselItem>
+          ))}
+      </CarouselContent>
+      <CarouselPrevious />
+      <CarouselNext />
+    </Carousel>
   );
 };
 
