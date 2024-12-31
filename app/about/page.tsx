@@ -5,8 +5,15 @@ const About = () => {
   return (
     <div className="min-h-screen mt-[10rem] p-[2rem]">
       <div className="flex flex-col gap-10">
-        <span className="font-extrabold text-3xl">About MoBan</span>
-        <span className="font-bold text-lg">模板 (mó bǎn)</span>
+        <div>
+          <span className="font-extrabold text-3xl">About MoBan</span>
+          <div className="flex flex-col mt-5">
+            <span className="font-bold text-lg">模板 (mó bǎn)</span>
+            <span className="font-bold">noun</span>
+            <span className="text-grey">Template</span>
+          </div>
+        </div>
+
         <p>
           At MoBan, we believe building a professional and stunning website
           shouldn't be a daunting or expensive task. That's why we've created a
