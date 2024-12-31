@@ -37,7 +37,7 @@ export default function Home() {
           dragControls={controls}
           style={{ touchAction: "none" }}
         >
-          <motion.div className="mx-auto h-full flex items-center text-background justify-center">
+          <motion.div className="bg-transparent mx-auto h-full flex items-center text-background justify-center">
             MoBan
           </motion.div>
         </motion.div>

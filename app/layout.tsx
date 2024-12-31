@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Dancing_Script, Roboto } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 import { ClerkProvider } from "@clerk/nextjs";

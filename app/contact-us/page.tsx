@@ -6,7 +6,7 @@ import { FaBusinessTime } from "react-icons/fa";
 
 const ContactUs = () => {
   return (
-    <div className="flex min-h-screen flex-col gap-20 md:justify-around md:flex-row mt-[15rem] ">
+    <div className="flex min-h-screen flex-col gap-20 md:justify-around md:flex-row mt-[15rem] p-5">
       <Card className="w-full md:w-[40%] p-10 max-h-[500px]">
         <div className="font-extrabold text-3xl mt-[5rem]">Get in Touch.</div>
         <div className="[&>*]:mt-5">
