@@ -9,16 +9,14 @@ import {
 
 const AppSidebar = () => {
   return (
-    <div className="bg-red-500">
-      <Sidebar side="left">
-        <SidebarHeader />
-        <SidebarContent>
-          <SidebarGroup />
-          <SidebarGroup />
-        </SidebarContent>
-        <SidebarFooter />
-      </Sidebar>
-    </div>
+    <Sidebar side="left" variant="sidebar" collapsible="offcanvas">
+      <SidebarHeader />
+      <SidebarContent>
+        <SidebarGroup />
+        <SidebarGroup />
+      </SidebarContent>
+      <SidebarFooter />
+    </Sidebar>
   );
 };
 
