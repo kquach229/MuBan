@@ -43,7 +43,10 @@ const CategoriesGrid = ({ title, items }: IProps) => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
         {items.map((item: IItems) => {
           return (
-            <Link href={`/templates/${item.category.toLowerCase()}`}>
+            <Link
+              key={item.category}
+              href={`/templates/${item.category.toLowerCase()}`}
+            >
               <Card className="h-52 p-5 place-content-center hover:cursor-pointer">
                 <CardContent className="flex flex-col justify-around h-full ml-5 hover:opacity-[0.8]">
                   {item.category}
