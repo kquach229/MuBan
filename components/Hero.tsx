@@ -37,7 +37,7 @@ const benefits = [
 
 const Hero = () => {
   return (
-    <div className="flex flex-col  md:flex-row p-[1rem] justify-around items-center pt-[15rem] md:pt-0 min-h-screen w-full bg-gradient-to-r from-white to-specialBeige">
+    <div className="flex flex-col  md:flex-row p-[1rem] justify-around items-center pt-[15rem] md:pt-0 min-h-screen w-full">
       <div className="flex flex-col gap-20">
         <span className="text-right hover:drop-shadow-2xl text-3xl drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)] max-w-[25rem]">
           Ready-Made Templates, Ready to Elevate Your Web Presence.
