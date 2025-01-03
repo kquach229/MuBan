@@ -40,7 +40,7 @@ const CategoriesGrid = ({ title, items }: IProps) => {
   return (
     <div>
       <div className="mb-5 text-xl font-bold underline">{title}</div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-cols-3 gap-3">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
         {items.map((item: IItems) => {
           return (
             <Link href={`/templates/${item.category.toLowerCase()}`}>
