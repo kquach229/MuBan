@@ -47,13 +47,14 @@ const Hero = () => {
       className='pt-[12rem]  bg-gradient-to-r from-[rgb(73,29,94)] to-[rgb(29,51,95)] min-h-screen'>
       <div className='container flex'>
         <div className='flex justify-between w-full mx-auto'>
-          <span className='text-4xl w-1/2 md:text-5xl leading-relaxed md:leading-loose text-white font-light'>
+          <span className='text-center w-full text-4xl md:w-1/2 md:text-5xl leading-relaxed md:leading-loose text-white font-light'>
             Ready-Made Templates, Ready to Elevate Your Web Presence.
           </span>
           <div className='overflow-hidden right-5'>
             <motion.img
               animate={{
-                translateY: [-30, 30],
+                translateY: [-20, 20],
+                translateX: [-5, 5],
               }}
               transition={{
                 repeat: Infinity,
