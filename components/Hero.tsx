@@ -1,6 +1,10 @@
-import Image from 'next/image';
+'use client';
 import { motion } from 'motion/react';
+import Image from 'next/image';
 import ReusableCarousel from './ReusableCarousel';
+import gradientObjectImage from '@/public/gradient_object_one.png';
+import gradientObjectTwoImage from '@/public/gradient_object_two.png';
+import { useRef } from 'react';
 
 const benefits = [
   {
@@ -36,30 +40,44 @@ const benefits = [
 ];
 
 const Hero = () => {
+  const containerRestraintRef = useRef(null);
   return (
-    <div className='flex flex-col  md:flex-row p-[1rem] justify-around items-center pt-[15rem] md:pt-0 min-h-screen w-full'>
-      <div className='flex flex-col gap-20'>
-        <span className='text-right hover:drop-shadow-2xl text-3xl drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)] max-w-[25rem]'>
-          Ready-Made Templates, Ready to Elevate Your Web Presence.
-        </span>
-
-        <ReusableCarousel carouselItems={benefits} />
+    <div
+      ref={containerRestraintRef}
+      className='pt-[12rem]  bg-gradient-to-r from-[rgb(73,29,94)] to-[rgb(29,51,95)] min-h-screen'>
+      <div className='container flex'>
+        <div className='flex justify-between w-full mx-auto'>
+          <span className='text-4xl w-1/2 md:text-5xl leading-relaxed md:leading-loose text-white font-light'>
+            Ready-Made Templates, Ready to Elevate Your Web Presence.
+          </span>
+          <div className='overflow-hidden right-5'>
+            <motion.img
+              animate={{
+                translateY: [-30, 30],
+              }}
+              transition={{
+                repeat: Infinity,
+                repeatType: 'mirror',
+                duration: 3,
+                ease: 'easeInOut',
+              }}
+              className='h-[355px] w-[355px] absolute top-[550px] right-[55px] md:right-5 md:top-1/4'
+              src={gradientObjectImage.src}
+              alt='gradient object'
+            />
+            <div>
+              <motion.img
+                drag
+                dragConstraints={containerRestraintRef}
+                dragTransition={{ power: 0.2 }}
+                className='h-[255px] w-[255px] absolute right-[5rem] top-3/4'
+                src={gradientObjectTwoImage.src}
+                alt='gradient object'
+              />
+            </div>
+          </div>
+        </div>
       </div>
-
-      <motion.div
-        className='box'
-        whileHover={{ scale: 1.1 }}
-        transition={{ duration: 0.2 }}
-        initial={{ opacity: 0, x: -500 }}
-        animate={{ opacity: 1, x: 0 }}>
-        <Image
-          className='flex-1 h-auto'
-          alt='wireframe'
-          src='/wireframe.svg'
-          height={500}
-          width={500}
-        />
-      </motion.div>
     </div>
   );
 };
