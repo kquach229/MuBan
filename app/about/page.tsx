@@ -1,16 +1,16 @@
-import Image from "next/image";
-import React from "react";
+import Image from 'next/image';
+import React from 'react';
 
 const About = () => {
   return (
-    <div className="min-h-screen mt-[10rem] p-[2rem]">
-      <div className="flex flex-col gap-10">
+    <div className='base-page-styles'>
+      <div className='flex flex-col gap-10 container paragraph-text'>
         <div>
-          <span className="font-extrabold text-3xl">About MoBan</span>
-          <div className="flex flex-col mt-5">
-            <span className="font-bold text-lg">模板 (mó bǎn)</span>
-            <span className="font-bold">noun</span>
-            <span className="text-grey">Template</span>
+          <span className='header-text'>About MoBan</span>
+          <div className='flex flex-col mt-5 sub-heading-text'>
+            <span className='font-bold text-lg'>模板 (mó bǎn)</span>
+            <span className='font-bold'>noun</span>
+            <span className='text-grey'>Template</span>
           </div>
         </div>
 
@@ -28,8 +28,8 @@ const About = () => {
           get you started.
         </p>
 
-        <p className="gap-2 flex flex-col">
-          <span className="font-bold text-2xl mb-5">Who We Are</span>
+        <p className='gap-2 flex flex-col'>
+          <span className='font-bold text-2xl mb-5'>Who We Are</span>
           <p>
             MoBan was founded with a simple idea: to empower creators with tools
             to bring their ideas to life online. Backed by a passionate team of
@@ -45,37 +45,37 @@ const About = () => {
           </p>
         </p>
 
-        <p className="h-full flex flex-col">
-          <span className="font-bold text-2xl mb-5">Why Choose Us?</span>
-          <ul className="[&>*]:mt-3">
+        <p className='h-full flex flex-col'>
+          <span className='font-bold text-2xl mb-5'>Why Choose Us?</span>
+          <ul className='[&>*]:mt-3'>
             <li>
-              <span className="font-bold">Expertly Crafted Designs:</span> Each
+              <span className='font-bold'>Expertly Crafted Designs:</span> Each
               template is meticulously designed by experienced professionals to
               ensure quality and usability.
             </li>
 
             <li>
-              <span className="font-bold">Versatile Collection:</span> From
+              <span className='font-bold'>Versatile Collection:</span> From
               portfolios and e-commerce stores to blogs and business sites,
               we've got something for everyone.
             </li>
 
             <li>
-              <span className="font-bold">Customizable & Flexible:</span> All
+              <span className='font-bold'>Customizable & Flexible:</span> All
               our templates are built with flexibility in mind, giving you full
               control to tailor them to your brand.
             </li>
 
             <li>
-              <span className="font-bold">Affordable Pricing:</span> We make
+              <span className='font-bold'>Affordable Pricing:</span> We make
               premium website templates accessible without breaking the bank.
             </li>
           </ul>
         </p>
 
         <p>
-          <span className="font-bold text-2xl mb-5">Our Vision</span>
-          <p className="mt-3">
+          <span className='font-bold text-2xl mb-5'>Our Vision</span>
+          <p className='mt-3'>
             We envision a world where anyone can build a stunning online
             presence with ease. By combining modern design with seamless
             functionality, MoBan aims to make web development simpler, faster,

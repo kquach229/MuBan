@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .header-text {
+    @apply inline-block text-4xl md:text-5xl font-extrabold md:leading-loose tracking-wider text-background/90;
+  }
+
+  .sub-heading-text {
+    @apply text-2xl text-background/50;
+  }
+
+  .paragraph-text {
+    @apply text-sm text-background/80 leading-relaxed;
+  }
+
+  .base-page-styles {
+    @apply pt-[8rem] pb-[8rem] bg-gradient-to-r from-[rgb(73,29,94)] to-[rgb(29,51,95)] min-h-screen;
+  }
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0 auto;

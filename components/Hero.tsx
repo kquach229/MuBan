@@ -42,13 +42,20 @@ const benefits = [
 const Hero = () => {
   const containerRestraintRef = useRef(null);
   return (
-    <div
-      ref={containerRestraintRef}
-      className='pt-[12rem]  bg-gradient-to-r from-[rgb(73,29,94)] to-[rgb(29,51,95)] min-h-screen'>
+    <div ref={containerRestraintRef} className='base-page-styles'>
       <div className='container flex'>
         <div className='flex justify-between w-full mx-auto'>
-          <span className='text-center w-full text-4xl md:w-1/2 md:text-5xl leading-relaxed md:leading-loose text-white font-light'>
-            Ready-Made Templates, Ready to Elevate Your Web Presence.
+          <span className='text-center w-full  md:text-left md:w-1/2  text-white font-light'>
+            <span className='header-text'>
+              Ready-Made Templates, Ready to Elevate Your Web Presence.
+            </span>
+            <motion.span
+              initial={{ opacity: 0, scale: 0.5, x: -30 }}
+              animate={{ opacity: 1, scale: 3.5, x: 0 }}
+              transition={{ duration: 3 }}
+              className='sub-heading-text'>
+              Every step of the way
+            </motion.span>
           </span>
           <div className='overflow-hidden right-5'>
             <motion.img

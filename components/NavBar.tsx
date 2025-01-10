@@ -45,6 +45,7 @@ const NavBar = () => {
             <div className='gap-5 flex items-center'>
               <Link href='/templates'>Templates</Link>
               <Link href='/about'>About</Link>
+              <Link href='/services'>Services</Link>
               <SignedOut>
                 <SignInButton>
                   <Button>Get Started</Button>
