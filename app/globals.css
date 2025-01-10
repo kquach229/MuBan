@@ -16,7 +16,7 @@
   }
 
   .base-page-styles {
-    @apply pt-[8rem] pb-[8rem] bg-gradient-to-r from-[rgb(73,29,94)] to-[rgb(29,51,95)] min-h-screen;
+    @apply pt-[12rem] pb-[12rem] bg-gradient-to-r from-[rgb(73,29,94)] to-[rgb(29,51,95)] min-h-screen;
   }
 }
 

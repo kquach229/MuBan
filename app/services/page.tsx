@@ -33,9 +33,9 @@ const ServicesPage = () => {
           information is best presented as mere teasers to other individualized
           pages.
         </p>
-        <div className='flex flex-col sm:flex-row gap-5 mx-auto mt-28 mb-28'>
+        <div className='flex flex-col justify-center md:flex-row gap-5 mx-auto mt-28 mb-28'>
           {services.map((service) => (
-            <Card key={service.title} className='h-72 w-[100%] md:w-1/3'>
+            <Card key={service.title} className='h-72 w-full md:w-[33%]'>
               <CardContent className='flex justify-center flex-col items-center text-center h-full'>
                 <CardHeader className='text-3xl font-bold tracking-wider bg-gradient-to-b from-[rgb(29,51,95)] to-[rgb(73,29,94)] text-transparent bg-clip-text'>
                   {service.title}
@@ -75,7 +75,7 @@ const ServicesPage = () => {
                 repeat: Infinity,
                 repeatType: 'mirror',
               }}
-              className='h-56 w-auto mt-24 absolute top-full -right-48  md:top-1/2 md:right-5'
+              className='h-56 w-auto mt-24 absolute top-[115%] -right-48  md:top-3/4 md:right-5'
               src='/gradient_object_four.png'
               alt='gradient object three'
             />
