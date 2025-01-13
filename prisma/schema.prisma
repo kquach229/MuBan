@@ -26,9 +26,10 @@ model Template {
   id Int @id @default(autoincrement())
   name String
   description String
+  features String[]
   price Float
+  imagePath String?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   purchasedBy User[] @relation("UserTemplates")
-
 }

@@ -7,20 +7,48 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { div } from 'motion/react-client';
+import Image from 'next/image';
 
-const TemplateCard = () => {
+const TemplateCard = ({ template }) => {
+  const updatedAtDate = new Date(template.updatedAt).toLocaleDateString(
+    'en-US'
+  );
+
+  console.log(template);
   return (
-    <Card>
+    <Card className='max-w-sm mx-auto'>
       <CardHeader>
-        <CardTitle>Card Title</CardTitle>
-        <CardDescription>Card Description</CardDescription>
+        <div className='flex flex-row justify-between'>
+          <div>
+            <CardTitle className='text-lg tracking-wider'>
+              {template.name}
+            </CardTitle>
+            <CardDescription className='mt-5'>
+              {template.description}
+            </CardDescription>
+          </div>
+          <span className='font-bold'>{template.price}</span>
+        </div>
       </CardHeader>
       <CardContent>
-        <p>Card Content</p>
+        <Image
+          className='rounded-sm'
+          src={template.imagePath}
+          width={400}
+          height={400}
+          alt='template'
+        />
+        <div className='m-5'>
+          Features:
+          {template.features.map((feature: string) => (
+            <li className='list-none'> - {feature}</li>
+          ))}
+        </div>
       </CardContent>
       <CardFooter>
-        <p>Card Footer</p>
+        <div className='text-foreground/50 text-xs'>
+          Updated At {updatedAtDate}
+        </div>
       </CardFooter>
     </Card>
   );
