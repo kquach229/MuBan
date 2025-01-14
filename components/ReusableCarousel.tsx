@@ -9,7 +9,17 @@ import {
 } from './ui/carousel';
 import { Card, CardContent } from './ui/card';
 
-const ReusableCarousel = ({ carouselItems }) => {
+interface ICarouselProps {
+  id: number;
+  title: string;
+  benefit?: string;
+}
+
+const ReusableCarousel = ({
+  carouselItems,
+}: {
+  carouselItems: ICarouselProps[];
+}) => {
   return (
     <Carousel
       className='w-full max-w-md'
@@ -20,7 +30,7 @@ const ReusableCarousel = ({ carouselItems }) => {
       ]}>
       <CarouselContent>
         {carouselItems &&
-          carouselItems.map((item) => (
+          carouselItems.map((item: ICarouselProps) => (
             <CarouselItem key={item.id}>
               <Card className={`h-[300px]  flex items-center text-left p-5`}>
                 <CardContent>

@@ -8,13 +8,12 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import Image from 'next/image';
-
-const TemplateCard = ({ template }) => {
+import { ITemplate } from '@/app/templates/page';
+const TemplateCard = ({ template }: { template: ITemplate }) => {
   const updatedAtDate = new Date(template.updatedAt).toLocaleDateString(
     'en-US'
   );
 
-  console.log(template);
   return (
     <Card className='max-w-sm mx-auto'>
       <CardHeader>
@@ -27,13 +26,15 @@ const TemplateCard = ({ template }) => {
               {template.description}
             </CardDescription>
           </div>
-          <span className='font-bold'>{template.price}</span>
+          <span className='font-bold text-foreground/50'>
+            ${template.price.toFixed(2)}
+          </span>
         </div>
       </CardHeader>
       <CardContent>
         <Image
           className='rounded-sm'
-          src={template.imagePath}
+          src={template.imagePath || ''}
           width={400}
           height={400}
           alt='template'

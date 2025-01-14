@@ -1,7 +1,5 @@
 'use client';
 import { motion } from 'motion/react';
-import Image from 'next/image';
-import ReusableCarousel from './ReusableCarousel';
 import gradientObjectImage from '@/public/gradient_object_one.png';
 import gradientObjectTwoImage from '@/public/gradient_object_two.png';
 import { useRef } from 'react';

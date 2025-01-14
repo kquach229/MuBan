@@ -1,12 +1,14 @@
 import { prisma } from '@/lib/prisma';
+import { NextRequest, NextResponse } from 'next/server';
 
-export async function POST(request, response) {
+export async function POST(request: NextRequest) {
   try {
     const { email, name } = await request.json();
     if (!email || !name) {
-      return response
-        .status(400)
-        .json({ error: 'Email and name are required fields' });
+      return NextResponse.json(
+        { error: 'Email and name are required fields' },
+        { status: 400 }
+      );
     }
     const user = await prisma.user.create({
       data: {
@@ -14,10 +16,10 @@ export async function POST(request, response) {
         name,
       },
     });
-    response.status(201).json({ user });
+    return NextResponse.json({ user }, { status: 201 });
   } catch (error) {
     console.error(error);
 
-    response.status(500).json({ error: 'Someting went wrong' });
+    return NextResponse.json({ error: 'Someting went wrong' }, { status: 500 });
   }
 }
