@@ -39,6 +39,11 @@ const AppSidebar = () => {
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
+                  <Link href='/dashboard'>Dashboard</Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
                   <Link href='/about'>About</Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
@@ -50,6 +55,11 @@ const AppSidebar = () => {
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
                   <Link href='/services'>Services</Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <Link href='/contact-us'>Contact Us</Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem className='ml-2'>
