@@ -4,39 +4,6 @@ import gradientObjectImage from '@/public/gradient_object_one.png';
 import gradientObjectTwoImage from '@/public/gradient_object_two.png';
 import { useRef } from 'react';
 
-const benefits = [
-  {
-    id: 1,
-    title: 'Time-Saving Solutions',
-    benefit:
-      'Instantly access professionally designed templates, eliminating the need to build from scratch.',
-  },
-  {
-    id: 2,
-    title: 'Cost-Effective',
-    benefit:
-      ' Affordable alternatives to hiring designers or developers, making high-quality websites accessible.',
-  },
-  {
-    id: 3,
-    title: 'Customizable Designs',
-    benefit:
-      'Easily tweak templates to match your unique brand identity and style.',
-  },
-  {
-    id: 4,
-    title: 'Diverse Collection',
-    benefit:
-      'Wide range of templates catering to various industries, platforms, and aesthetics.',
-  },
-  {
-    id: 5,
-    title: 'Beginner-Friendly',
-    benefit:
-      'User-friendly templates designed to simplify the website-building process, even for non-technical users.',
-  },
-];
-
 const Hero = () => {
   const containerRestraintRef = useRef(null);
   return (
