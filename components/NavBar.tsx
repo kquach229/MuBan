@@ -57,7 +57,6 @@ const NavBar = () => {
             </div>
           </div>
         </div>
-
         <div className='block md:hidden z-[500] bg-foreground p-5 fixed top-0 w-full justify-between items-center duration-500 h-[100px]'>
           <AppSidebar />
         </div>
