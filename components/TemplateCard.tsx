@@ -32,7 +32,7 @@ const TemplateCard = ({ template }: { template: ITemplate }) => {
         </div>
       </CardHeader>
       <CardContent>
-        <Image
+        <img
           className='rounded-sm'
           src={template.imagePath || ''}
           width={400}
