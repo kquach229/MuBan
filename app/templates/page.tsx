@@ -2,6 +2,8 @@ import TemplateCard from '@/components/TemplateCard';
 import { prisma } from '@/lib/prisma';
 import React from 'react';
 
+export const dynamic = 'force-dynamic';
+
 export interface ITemplate {
   name: string;
   description: string;
