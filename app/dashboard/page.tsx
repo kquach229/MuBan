@@ -10,8 +10,6 @@ import { Button } from '@/components/ui/button';
 const DashboardPage = async () => {
   const user = await currentUser();
 
-  // if no prisma user, create it here
-
   if (!user) {
     return (
       <div className='base-page-styles'>
