@@ -3,6 +3,8 @@ import { motion } from 'motion/react';
 import gradientObjectImage from '@/public/gradient_object_one.png';
 import gradientObjectTwoImage from '@/public/gradient_object_two.png';
 import { useRef } from 'react';
+import { Button } from './ui/button';
+import { SignedOut, SignInButton } from '@clerk/nextjs';
 
 const Hero = () => {
   const containerRestraintRef = useRef(null);
@@ -10,7 +12,7 @@ const Hero = () => {
     <div ref={containerRestraintRef} className='base-page-styles'>
       <div className='container flex'>
         <div className='flex justify-between w-full mx-auto'>
-          <span className='text-center w-full  md:text-left md:w-1/2  text-white font-light'>
+          <span className='text-center w-full md:text-left md:w-1/2 text-white font-light'>
             <span className='header-text'>
               Ready-Made Templates, Ready to Elevate Your Web Presence.
             </span>
@@ -21,6 +23,13 @@ const Hero = () => {
               className='sub-heading-text'>
               Every step of the way
             </motion.span>
+            <SignedOut>
+              <div className='mt-10'>
+                <SignInButton>
+                  <Button>Get Started</Button>
+                </SignInButton>
+              </div>
+            </SignedOut>
           </span>
           <div className='overflow-hidden right-5'>
             <motion.img

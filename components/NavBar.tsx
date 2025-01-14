@@ -43,6 +43,7 @@ const NavBar = () => {
               <span className='text-xl ml-5'>MoBan</span>
             </Link>
             <div className='gap-5 flex items-center'>
+              <Link href='/dashboard'>Dashboard</Link>
               <Link href='/templates'>Templates</Link>
               <Link href='/about'>About</Link>
               <Link href='/services'>Services</Link>
